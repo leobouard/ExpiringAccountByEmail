@@ -1,0 +1,20 @@
+﻿<html>
+  <head>
+      <style>
+      html {
+          font-family: sans-serif;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: 0.2px;
+      }
+      p {
+          margin: 20px 0px;
+      }
+      </style>
+  </head>
+  <body>
+    <h2>$($_.Name)'s account expires in $($_.ExpiresIn) day(s)</h2>
+    <p>For your information, the account <a href="mailto:$($_.UserPrincipalName)">$($_.UserPrincipalName)</a> will expire on $(Get-Date $_.AccountExpirationDate -Format 'yyyy-MM-dd') at midnight.<br>Once the account has expired, it will <b>no longer be usable</b> and will be automatically deleted 30 days later.</p>
+    <p>If the account expiry date needs to be changed, please contact your usual IT support.<br>Otherwise, you can simply ignore this email.</p>
+  </body>
+</html>

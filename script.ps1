@@ -1,7 +1,7 @@
 ﻿param(
     [array]$ExpiresInDays = (30,15,7),
     [Parameter(Mandatory=$true)][ValidateSet('Self','Manager')][array]$Recipients,
-    [array]$TestRecipient = ('email@domain.co'),
+    [array]$TestRecipient,
     [string]$SearchBase = (Get-ADDomain).DistinguishedName
 )
 
